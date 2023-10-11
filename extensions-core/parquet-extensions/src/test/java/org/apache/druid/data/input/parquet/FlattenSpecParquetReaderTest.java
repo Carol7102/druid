@@ -213,9 +213,9 @@ public class FlattenSpecParquetReaderTest extends BaseParquetReaderTest
     SortedSet<String> keys = new TreeSet<>(map.keySet());
     Map<String, Object> newMap = new LinkedHashMap<String, Object>();
     for (String key : keys) { 
-        Object value = map.get(key);
-        newMap.put(key, value);
-     }
+      Object value = map.get(key);
+      newMap.put(key, value);
+    }
     Assert.assertEquals(FLAT_JSON, DEFAULT_JSON_WRITER.writeValueAsString(newMap));
   }
 
